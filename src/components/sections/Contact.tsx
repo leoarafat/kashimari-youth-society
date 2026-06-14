@@ -66,7 +66,7 @@ export default function Contact() {
           <div className="card-bg rounded-2xl p-7">
             {sent && (
               <div className="mb-5 flex items-center gap-2 rounded-xl bg-leaf/10 px-4 py-3 text-sm font-600 text-leaf">
-                <CheckCircle2 size={18} /> Message sent! We'll reply soon.
+                <CheckCircle2 size={18} /> Message sent! We&apos;ll reply soon.
               </div>
             )}
             <div className="grid gap-4 sm:grid-cols-2">
