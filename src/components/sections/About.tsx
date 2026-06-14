@@ -1,4 +1,3 @@
-"use client";
 import { Eye, Target, Users } from "lucide-react";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";

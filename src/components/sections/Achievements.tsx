@@ -1,4 +1,3 @@
-"use client";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
 import { achievements } from "@/data/site";

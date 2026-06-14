@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
@@ -15,9 +13,8 @@ export default function Blog() {
           <Reveal key={b.title} delay={i * 0.08}>
             <article className="card-bg group flex h-full flex-col overflow-hidden rounded-2xl transition hover:-translate-y-1.5 hover:shadow-xl">
               <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src={b.image} alt={b.title} fill loading="lazy"
-                  sizes="(max-width:1024px) 100vw, 33vw"
-                  className="object-cover transition duration-500 group-hover:scale-105" />
+                <img src={b.image} alt={b.title} loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <span className="absolute left-4 top-4 rounded-full bg-leaf px-3 py-1 text-xs font-700 text-white">
                   {b.category}
                 </span>

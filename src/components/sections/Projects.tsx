@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import { ArrowUpRight, Calendar } from "lucide-react";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
@@ -15,8 +13,8 @@ export default function Projects() {
           <Reveal key={p.name} delay={(i % 2) * 0.1}>
             <article className="card-bg group flex h-full overflow-hidden rounded-2xl transition hover:shadow-xl">
               <div className="relative w-2/5 shrink-0 overflow-hidden">
-                <Image src={p.image} alt={p.name} fill loading="lazy"
-                  sizes="40vw" className="object-cover transition duration-500 group-hover:scale-105" />
+                <img src={p.image} alt={p.name} loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <span className="inline-flex items-center gap-1.5 text-xs font-600 text-leaf">

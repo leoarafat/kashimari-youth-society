@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
 import { activities } from "@/data/site";
@@ -14,9 +12,8 @@ export default function Activities() {
           <Reveal key={a.title} delay={(i % 3) * 0.08}>
             <article className="card-bg group h-full overflow-hidden rounded-2xl transition hover:-translate-y-1.5 hover:shadow-xl">
               <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src={a.image} alt={a.title} fill loading="lazy"
-                  sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-                  className="object-cover transition duration-500 group-hover:scale-105" />
+                <img src={a.image} alt={a.title} loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <span className="absolute left-4 top-4 grid h-10 w-10 place-items-center rounded-xl bg-ink/70 text-mint backdrop-blur">
                   <a.icon size={18} />
                 </span>

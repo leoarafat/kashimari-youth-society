@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
@@ -15,8 +13,8 @@ export default function Team() {
           <Reveal key={m.name} delay={(i % 3) * 0.08}>
             <article className="card-bg group overflow-hidden rounded-2xl text-center transition hover:-translate-y-1.5 hover:shadow-xl">
               <div className="relative mx-auto mt-7 h-32 w-32 overflow-hidden rounded-full ring-4 ring-[var(--surface)]">
-                <Image src={m.photo} alt={m.name} fill loading="lazy" sizes="128px"
-                  className="object-cover transition duration-500 group-hover:scale-105" />
+                <img src={m.photo} alt={m.name} loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
               </div>
               <div className="p-6">
                 <h3 className="font-display text-lg font-600">{m.name}</h3>

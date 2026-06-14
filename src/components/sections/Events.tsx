@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import { CalendarDays, MapPin } from "lucide-react";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
@@ -15,9 +13,8 @@ export default function Events() {
           <Reveal key={e.name} delay={i * 0.08}>
             <article className="card-bg group overflow-hidden rounded-2xl transition hover:-translate-y-1.5 hover:shadow-xl">
               <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src={e.image} alt={e.name} fill loading="lazy"
-                  sizes="(max-width:1024px) 100vw, 33vw"
-                  className="object-cover transition duration-500 group-hover:scale-105" />
+                <img src={e.image} alt={e.name} loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <span className="absolute left-4 top-4 rounded-lg bg-ember px-3 py-1 text-xs font-700 text-white">
                   {e.date}
                 </span>

@@ -20,12 +20,17 @@
   --border: rgba(255,255,255,0.08);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  font-family: "Sora", system-ui, -apple-system, sans-serif;
+}
 
 body {
   background: var(--bg);
   color: var(--fg);
   transition: background-color .3s ease, color .3s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Honour reduced-motion preferences */

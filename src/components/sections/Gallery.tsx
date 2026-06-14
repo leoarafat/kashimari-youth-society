@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
@@ -23,8 +21,8 @@ export default function Gallery() {
             onClick={() => setOpen(src)}
             className="group block w-full overflow-hidden rounded-xl"
           >
-            <Image src={src} alt={`Gallery photo ${i + 1}`} width={600} height={700}
-              loading="lazy" sizes="(max-width:640px) 50vw, 25vw"
+            <img src={src} alt={`Gallery photo ${i + 1}`} width={600} height={700}
+              loading="lazy"
               className="w-full transition duration-500 group-hover:scale-105" />
           </motion.button>
         ))}
@@ -45,7 +43,7 @@ export default function Gallery() {
               onClick={(e) => e.stopPropagation()}
               className="relative max-h-[85vh] w-full max-w-3xl overflow-hidden rounded-2xl"
             >
-              <Image src={open} alt="Enlarged gallery photo" width={1200} height={1400}
+              <img src={open} alt="Enlarged gallery photo" width={1200} height={1400}
                 className="h-auto w-full object-contain" />
             </motion.div>
           </motion.div>

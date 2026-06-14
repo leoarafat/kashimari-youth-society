@@ -1,4 +1,3 @@
-"use client";
 import { HeartHandshake } from "lucide-react";
 import { nav, org, socials } from "@/data/site";
 

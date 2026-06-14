@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { CheckCircle2, HeartHandshake } from "lucide-react";
 import Section from "../ui/Section";

@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 import Loader from "@/components/ui/Loader";
 import Navbar from "@/components/Navbar";
@@ -19,12 +18,11 @@ import Blog from "@/components/sections/Blog";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <Loader />
       <Navbar />
-      {/* Page transition: gentle fade-up of the whole document */}
       <motion.main
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}

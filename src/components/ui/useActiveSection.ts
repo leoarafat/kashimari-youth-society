@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 
 /** Tracks which section id is currently in view for nav highlighting. */

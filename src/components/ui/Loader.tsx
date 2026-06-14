@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { org } from "@/data/site";

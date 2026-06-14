@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { hero, org } from "@/data/site";
@@ -77,12 +75,10 @@ export default function Hero() {
           className="relative"
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
-            <Image
+            <img
               src={hero.image}
               alt="Youth volunteers working together in the community"
-              fill priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
           </div>
