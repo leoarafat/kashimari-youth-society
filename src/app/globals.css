@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #0A1A2F;
+  --muted: #5b6b7d;
+  --surface: #F6F8FA;
+  --card: #ffffff;
+  --border: rgba(10,26,47,0.08);
+}
+
+.dark {
+  --bg: #060d18;
+  --fg: #e8eef6;
+  --muted: #8da3bd;
+  --surface: #0b1626;
+  --card: #0d1b2e;
+  --border: rgba(255,255,255,0.08);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  transition: background-color .3s ease, color .3s ease;
+}
+
+/* Honour reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible { outline: 2px solid #F2731C; outline-offset: 2px; border-radius: 4px; }
+
+::selection { background: #F2731C; color: #fff; }
+
+/* Thin branded scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1B4D8C; border-radius: 99px; }
+
+.surface { background: var(--surface); }
+.card-bg { background: var(--card); border: 1px solid var(--border); }
+.text-muted { color: var(--muted); }
+
+/* Section heading rule used as a structural signature across the site */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  font-weight: 700; color: #1E8A5B;
+}
+.eyebrow::before {
+  content: ""; width: 28px; height: 2px; background: #F2731C;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #1B4D8C, #1E8A5B 60%, #F2731C);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
